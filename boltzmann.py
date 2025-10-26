@@ -67,9 +67,11 @@ def get_camb_pk_lin(cosmo, *, nonlin=False):
     cp.Want_cl_2D_array = False
     cp.WantTransfer = True
     
+    ######################################################
     # MGCAMB here
     fR0 = cosmo["extra_parameters"]["fR0"]
     cp.set_mgparams(MG_flag=3, QSA_flag=4, F_R0=-fR0)
+    ######################################################
     
     # basic background stuff
     h2 = cosmo['h']**2
