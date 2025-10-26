@@ -5,7 +5,6 @@ import numpy as np
 from .. import Pk2D
 from . import EmulatorPk
 
-
 class FREmu(EmulatorPk):
     """ Nonlinear power spectrum emulator from fremu
     
@@ -15,7 +14,7 @@ class FREmu(EmulatorPk):
         import warnings
         with warnings.catch_warnings():
             warnings.filterwarnings('ignore', category=UserWarning)
-            from FREmus import FREmu
+            from .FREmus import FREmu
             self.mpk = FREmu.emulator()
         self.a_min = 0.25
         self.a_max = 1
