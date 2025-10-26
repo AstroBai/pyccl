@@ -15,7 +15,7 @@ class FREmu(EmulatorPk):
         import warnings
         with warnings.catch_warnings():
             warnings.filterwarnings('ignore', category=UserWarning)
-            from fremu import FREmu
+            from FREmus import FREmu
             self.mpk = FREmu.emulator()
         self.a_min = 0.25
         self.a_max = 1
